@@ -1,0 +1,830 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "npc",
+      "creature",
+      "vehicle"
+    ],
+    "templates": {
+      "characteristics": {
+        "characteristics": {
+          "ws": {
+            "type": "number",
+            "label": "CHAR.WS",
+            "abrev": "CHARAbbrev.WS",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "bs": {
+            "type": "Number",
+            "label": "CHAR.BS",
+            "abrev": "CHARAbbrev.BS",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "s": {
+            "type": "Number",
+            "label": "CHAR.S",
+            "abrev": "CHARAbbrev.S",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "t": {
+            "type": "Number",
+            "label": "CHAR.T",
+            "abrev": "CHARAbbrev.T",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "ag": {
+            "type": "Number",
+            "label": "CHAR.Ag",
+            "abrev": "CHARAbbrev.Ag",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "int": {
+            "type": "Number",
+            "label": "CHAR.Int",
+            "abrev": "CHARAbbrev.Int",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "wp": {
+            "type": "Number",
+            "label": "CHAR.WP",
+            "abrev": "CHARAbbrev.WP",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          },
+          "fel": {
+            "type": "Number",
+            "label": "CHAR.Fel",
+            "abrev": "CHARAbbrev.Fel",
+            "initial": 20,
+            "modifier": 0,
+            "advances": 0,
+            "bonusMod": 0,
+            "calculationBonusModifier": 0
+          }
+        }
+      },
+      "status": {
+        "status": {
+          "wounds": {
+            "type": "Number",
+            "label": "Wounds",
+            "abrev": "W",
+            "value": 10,
+            "max": 10
+          },
+          "criticalWounds": {
+            "type": "Number",
+            "label": "Critical Wounds",
+            "value": 0,
+            "max": 3
+          },
+          "corruption": {
+            "type": "Number",
+            "label": "Corruption",
+            "value": 0,
+            "max": 100
+          },
+          "insanity": {
+            "type": "Number",
+            "label": "Insanity Points",
+            "value": 0,
+            "max": 100
+          },
+          "encumbrance": {
+            "type": "Number",
+            "label": "Encumbrance",
+            "max": 0,
+            "current": 0
+          },
+          "mount": {
+            "id": "",
+            "mounted": false,
+            "isToken": false,
+            "tokenData": {
+              "scene": "",
+              "token": ""
+            }
+          }
+        }
+      },
+      "details": {
+        "details": {
+          "species": {
+            "type": "String",
+            "label": "Species",
+            "value": "",
+            "subspecies": ""
+          },
+          "gender": {
+            "type": "String",
+            "label": "Gender",
+            "value": ""
+          },
+          "biography": {
+            "type": "String",
+            "label": "Biography",
+            "value": ""
+          },
+          "gmnotes": {
+            "type": "String",
+            "label": "GM Notes",
+            "value": ""
+          },
+          "size": {
+            "type": "String",
+            "label": "Size",
+            "value": "avg"
+          },
+          "move": {
+            "type": "Number",
+            "label": "Movement",
+            "value": 4,
+            "walk": 0,
+            "run": 0
+          },
+          "god": {
+            "type": "String",
+            "label": "God",
+            "value": ""
+          },
+          "status": {
+            "type": "String",
+            "value": "",
+            "standing": "",
+            "tier": 0,
+            "modifier": 0
+          },
+          "hitLocationTable": {
+            "value": "hitloc",
+            "type": "String",
+            "label": "Hit Location Table"
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": [
+        "characteristics",
+        "status",
+        "details"
+      ],
+      "status": {
+        "fate": {
+          "type": "Number",
+          "label": "Fate Points",
+          "value": 0,
+          "max": 0
+        },
+        "fortune": {
+          "type": "Number",
+          "label": "Fortune Points",
+          "value": 0,
+          "max": 0
+        }
+      },
+      "details": {
+        "experience": {
+          "type": "Number",
+          "label": "Experience",
+          "total": 0,
+          "spent": 0,
+          "log": []
+        },
+        "career": {
+          "type": "String",
+          "label": "Career",
+          "value": ""
+        },
+        "careerPath": {
+          "type": "String",
+          "label": "Career Path",
+          "value": "tier1"
+        },
+        "completedCareers": {
+          "type": "String",
+          "label": "Completed Careers",
+          "value": []
+        },
+        "age": {
+          "type": "String",
+          "label": "Age",
+          "value": ""
+        },
+        "height": {
+          "type": "String",
+          "label": "Height",
+          "value": ""
+        },
+        "weight": {
+          "type": "String",
+          "label": "Weight",
+          "value": ""
+        },
+        "hairColour": {
+          "type": "String",
+          "label": "Hair Colour",
+          "value": ""
+        },
+        "eyeColour": {
+          "type": "String",
+          "label": "Eye Colour",
+          "value": ""
+        },
+        "distinguishingMark": {
+          "type": "String",
+          "label": "Distinguishing Mark",
+          "value": ""
+        },
+        "starSign": {
+          "type": "String",
+          "label": "Star Sign",
+          "value": ""
+        }
+      }
+    },
+    "npc": {
+      "templates": [
+        "characteristics",
+        "status",
+        "details"
+      ]
+    },
+    "creature": {
+      "templates": [
+        "characteristics",
+        "status",
+        "details"
+      ]
+    },
+    "vehicle": {
+      "characteristics": {
+        "t": {
+          "type": "Number",
+          "label": "CHAR.T",
+          "abrev": "CHARAbbrev.T",
+          "initial": 20,
+          "modifier": 0,
+          "advances": 0
+        }
+      },
+      "status": {
+        "wounds": {
+          "type": "Number",
+          "label": "Wounds",
+          "abrev": "W",
+          "value": 8,
+          "max": 8
+        },
+        "criticalWounds": {
+          "type": "Number",
+          "label": "Critical Wounds",
+          "value": 0,
+          "max": 2
+        },
+        "carries": {
+          "type": "Number",
+          "label": "Carries",
+          "current": 0,
+          "max": 10
+        },
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "initial": 0,
+          "current": 0
+        }
+      },
+      "details": {
+        "move": {
+          "type": "Number",
+          "label": "Movement",
+          "value": 0
+        },
+        "length": {
+          "type": "Number",
+          "label": "Length",
+          "value": 0
+        },
+        "hitLocationTable": {
+          "value": "hitloc",
+          "type": "String",
+          "label": "Hit Location Table"
+        },
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "GM Description",
+          "value": ""
+        },
+        "price": {
+          "type": "String",
+          "label": "Price",
+          "gc": 0
+        },
+        "availability": {
+          "type": "String",
+          "label": "Availability",
+          "value": ""
+        }
+      },
+      "passengers": [],
+      "roles": []
+    }
+  },
+  "Item": {
+    "types": [
+      "ammunition",
+      "armour",
+      "career",
+      "container",
+      "critical",
+      "disease",
+      "injury",
+      "money",
+      "mutation",
+      "blessing",
+      "disorder",
+      "talent",
+      "trapping",
+      "skill",
+      "spell",
+      "trait",
+      "weapon"
+    ],
+    "templates": {
+      "quantity": {
+        "quantity": {
+          "type": "Number",
+          "label": "Quantity",
+          "value": 1
+        }
+      },
+      "encumbrance": {
+        "encumbrance": {
+          "type": "Number",
+          "label": "Encumbrance",
+          "value": 0
+        }
+      },
+      "price": {
+        "price": {
+          "type": "String",
+          "label": "Price",
+          "gc": 0,
+          "ss": 0,
+          "bp": 0
+        }
+      },
+      "availability": {
+        "availability": {
+          "type": "String",
+          "label": "Availability",
+          "value": ""
+        }
+      },
+      "description": {
+        "description": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        },
+        "gmdescription": {
+          "type": "String",
+          "label": "Description",
+          "value": ""
+        }
+      },
+      "location": {
+        "location": {
+          "type": "Number",
+          "label": "Location",
+          "value": 0
+        }
+      }
+    },
+    "career": {
+      "templates": [
+        "description"
+      ],
+      "careerClass": {
+        "type": "String",
+        "label": "Career Class",
+        "value": ""
+      },
+      "tier": {
+        "type": "String",
+        "label": "Tier",
+        "value": "tier1"
+      },
+      "current": {
+        "type": "Boolean",
+        "value": false
+      },
+      "complete": {
+        "type": "Boolean",
+        "value": false
+      },
+      "careerEntries": {
+        "type": "String",
+        "label": "Career Entries",
+        "value": ""
+      },
+      "careerExits": {
+        "type": "String",
+        "label": "Career Exits",
+        "value": ""
+      },
+      "characteristics": {
+        "type": "String",
+        "label": "Characteristic Advances",
+        "value": ""
+      },
+      "skills": {
+        "type": "String",
+        "label": "Skills",
+        "value": []
+      },
+      "talents": {
+        "type": "String",
+        "label": "Talents",
+        "value": []
+      },
+      "trappings": {
+        "type": "String",
+        "label": "Trappings",
+        "value": []
+      }
+    },
+    "weapon": {
+      "templates": [
+        "description",
+        "quantity",
+        "encumbrance",
+        "price",
+        "availability",
+        "location"
+      ],
+      "damage": {
+        "type": "String",
+        "label": "Damage",
+        "dice": "",
+        "value": ""
+      },
+      "reach": {
+        "type": "String",
+        "label": "Reach",
+        "value": ""
+      },
+      "range": {
+        "type": "String",
+        "label": "Range",
+        "value": ""
+      },
+      "weaponGroup": {
+        "type": "String",
+        "label": "Weapon Group",
+        "value": "basic"
+      },
+      "qualities": {
+        "label": "Qualities",
+        "value": []
+      },
+      "flaws": {
+        "label": "Flaws",
+        "value": []
+      },
+      "special": {
+        "type": "String",
+        "label": "Special",
+        "value": ""
+      },
+      "equipped": false
+    },
+    "armour": {
+      "templates": [
+        "description",
+        "quantity",
+        "encumbrance",
+        "price",
+        "availability",
+        "location"
+      ],
+      "worn": {
+        "type": "Boolean",
+        "label": "Worn",
+        "value": false
+      },
+      "armourType": {
+        "type": "String",
+        "label": "Armour Type",
+        "value": ""
+      },
+      "penalty": {
+        "type": "String",
+        "label": "Penalty",
+        "value": ""
+      },
+      "qualities": {
+        "type": "String",
+        "label": "Qualities",
+        "value": []
+      },
+      "flaws": {
+        "type": "String",
+        "label": "Flaws",
+        "value": []
+      },
+      "special": {
+        "type": "String",
+        "label": "Special",
+        "value": ""
+      },
+      "AP": {
+        "head": 0,
+        "lArm": 0,
+        "rArm": 0,
+        "lLeg": 0,
+        "rLeg": 0,
+        "body": 0
+      }
+    },
+    "ammunition": {
+      "templates": [
+        "description",
+        "quantity",
+        "encumbrance",
+        "price",
+        "availability",
+        "location"
+      ],
+      "ammunitionType": {
+        "type": "String",
+        "label": "Ammunition Type",
+        "value": ""
+      },
+      "range": {
+        "type": "String",
+        "label": "Range",
+        "value": ""
+      },
+      "damage": {
+        "type": "String",
+        "label": "Damage",
+        "dice": "",
+        "value": ""
+      }
+    },
+    "container": {
+      "templates": [
+        "description",
+        "quantity",
+        "encumbrance",
+        "price",
+        "availability",
+        "location"
+      ],
+      "worn": {
+        "type": "Boolean",
+        "label": "Worn",
+        "value": false
+      },
+      "wearable": {
+        "type": "Boolean",
+        "label": "Wearable",
+        "value": false
+      },
+      "carries": {
+        "type": "Number",
+        "label": "Carries",
+        "value": 0
+      }
+    },
+    "trapping": {
+      "templates": [
+        "description",
+        "quantity",
+        "encumbrance",
+        "price",
+        "availability",
+        "location"
+      ],
+      "trappingType": {
+        "type": "String",
+        "label": "Trapping Type",
+        "value": ""
+      }
+    },
+    "talent": {
+      "templates": [
+        "description"
+      ],
+      "maxRanks": {
+        "type": "Number",
+        "label": "Max Ranks",
+        "value": 1
+      },
+      "ranks": {
+        "type": "Number",
+        "label": "Ranks",
+        "value": 1
+      },
+      "requirement": {
+        "type": "String",
+        "label": "Requirement",
+        "value": ""
+      }
+    },
+    "skill": {
+      "templates": [
+        "description"
+      ],
+      "advanced": {
+        "type": "Boolean",
+        "label": "Advanced Skill",
+        "value": false
+      },
+      "characteristic": {
+        "type": "String",
+        "label": "Characteristic",
+        "value": "ws"
+      },
+      "advances": {
+        "type": "Number",
+        "label": "Advances",
+        "value": 0
+      }
+    },
+    "spell": {
+      "templates": [
+        "description"
+      ],
+      "lore": {
+        "type": "String",
+        "label": "Lore",
+        "value": ""
+      },
+      "range": {
+        "type": "String",
+        "label": "Range",
+        "value": ""
+      },
+      "target": {
+        "type": "String",
+        "label": "Target",
+        "value": ""
+      },
+      "duration": {
+        "type": "String",
+        "label": "Duration",
+        "value": ""
+      },
+      "damage": {
+        "type": "String",
+        "label": "Damage",
+        "value": ""
+      },
+      "castingNumber": {
+        "type": "Number",
+        "label": "Casting Number",
+        "value": 0
+      }
+    },
+    "blessing": {
+      "templates": [
+        "description"
+      ],
+      "god": {
+        "type": "String",
+        "label": "God",
+        "value": ""
+      },
+      "range": {
+        "type": "String",
+        "label": "Range",
+        "value": ""
+      },
+      "duration": {
+        "type": "String",
+        "label": "Duration",
+        "value": ""
+      },
+      "target": {
+        "type": "String",
+        "label": "Target",
+        "value": ""
+      }
+    },
+    "critical": {
+      "templates": [
+        "description"
+      ],
+      "location": {
+        "type": "String",
+        "label": "Hit Location",
+        "value": ""
+      },
+      "severity": {
+        "type": "String",
+        "label": "Severity",
+        "value": "light"
+      }
+    },
+    "disease": {
+      "templates": [
+        "description"
+      ],
+      "contraction": {
+        "type": "String",
+        "label": "Contraction Method",
+        "value": ""
+      },
+      "incubation": {
+        "type": "String",
+        "label": "Incubation Period",
+        "value": ""
+      },
+      "duration": {
+        "type": "String",
+        "label": "Duration",
+        "value": ""
+      }
+    },
+    "injury": {
+      "templates": [
+        "description"
+      ],
+      "severity": {
+        "type": "String",
+        "label": "Severity",
+        "value": ""
+      }
+    },
+    "mutation": {
+      "templates": [
+        "description"
+      ],
+      "type": {
+        "type": "String",
+        "label": "Mutation Type",
+        "value": "physical"
+      }
+    },
+    "disorder": {
+      "templates": [
+        "description"
+      ],
+      "causedBy": {
+        "type": "String",
+        "label": "Caused By",
+        "value": ""
+      }
+    },
+    "trait": {
+      "templates": [
+        "description"
+      ]
+    },
+    "money": {
+      "templates": [
+        "description"
+      ],
+      "denomination": {
+        "type": "String",
+        "label": "Denomination",
+        "value": "gc"
+      }
+    }
+  }
+}
