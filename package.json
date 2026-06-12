@@ -1,0 +1,43 @@
+{
+  "name": "wfrp2e",
+  "version": "1.0.0",
+  "description": "Warhammer Fantasy Roleplay 2nd Edition system for Foundry VTT",
+  "main": "wfrp2e.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scriptPacker.js && cross-env NODE_ENV=development rollup --config rollup.config.mjs --watch",
+    "release": "node scriptPacker.js && cross-env NODE_ENV=production rollup --config rollup.config.mjs && cross-env NODE_ENV=production node dbpacker.js",
+    "pack": "node dbpacker.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muruumuys-collab/my-system.git"
+  },
+  "keywords": [
+    "foundry",
+    "foundry-vtt",
+    "fvtt",
+    "wfrp",
+    "wfrp2e",
+    "warhammer",
+    "fantasy",
+    "roleplay"
+  ],
+  "author": "muruumuys-collab",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/muruumuys-collab/my-system/issues"
+  },
+  "homepage": "https://github.com/muruumuys-collab/my-system#readme",
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "1.0.2",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^10.1.0",
+    "rollup": "^4.59.0",
+    "rollup-plugin-baked-env": "^1.0.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-copy-watch": "^0.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.85.1"
+  }
+}
